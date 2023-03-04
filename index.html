@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phone Hunter</title>
+    <link rel="icon" type="image/x-icon" href="/images/phone.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.51.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <header class="my-10">
+      <h1 class="text-4xl text-center font-bold">Phone Hunter</h1>
+    </header>
+
+    <!-- main -->
+    <main>
+      <div class="flex justify-center my-5 mx-3">
+        <input
+          id="search-field"
+          type="text"
+          placeholder="Search your device"
+          class="input input-bordered input-primary w-full max-w-xs"
+        />
+        <button id="btn-search" class="btn btn-active btn-primary mx-4">
+          Search
+        </button>
+      </div>
+      <!-- display search results -->
+      <div id="phone-container" class="grid md:grid-cols-3 my-10"></div>
+      <!-- d-none -->
+      <div id="not-found" class="my-5 text-center text-2xl hidden">
+        No Device Found
+      </div>
+      <div
+        id="loader"
+        style="height: 400px"
+        class="flex justify-center items-center hidden"
+      >
+        <progress class="progress w-56"></progress>
+      </div>
+      <div id="show-all" class="flex justify-center items-center hidden">
+        <button id="btn-all" class="btn btn-active btn-primary mx-4 my-5">
+          Show All
+        </button>
+      </div>
+
+      <!-- modal contents -->
+
+      <!-- body of modal -->
+      <input type="checkbox" id="my-modal" class="modal-toggle" />
+      <div class="modal">
+        <div class="modal-box">
+          <h3 id="details-title" class="font-bold text-lg">
+            Congratulations random Internet user!
+          </h3>
+          <div id="phone-details" class="py-4"></div>
+          <div class="modal-action">
+            <label for="my-modal" class="btn">Yay!</label>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- script -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/phone.js"></script>
+  </body>
+</html>
